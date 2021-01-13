@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <link rel="stylesheet" href="assets/css/styles.css">
+        <title>Toc Toc Inicio</title>
+        <style>
+            .center{
+                width: 75%;
+                margin: 0 auto;
+            }
+            .logo{
+                width: 30%;
+                font-size: 30px;
+                margin-top: 3%;
+            }
+        </style>
+    </head>
+    <body>
+        <header class="header">
+            <div class="center">
+                <!--LOGO-->
+                <div id="logo" class="logo">
+                    <img src="assets/img/logoTransporte.png" alt="Logotipo" class="appLogo" />
+                </div>
+                <div class="name"><span id="brand" class="brand">Toc Toc</span></div>
+            </div>
+        </header>
+        <div class="contenedor">
+            <nav id="menu" class="menu">
+                <ul class="menuUl">
+                    <li class="li">
+                        <a href="index.html">Inicio</a>
+                    </li>
+                    <li class="li">
+                        <a href="registro_cliente.html">Crear Cuenta</a>
+                    </li>
+                    <li class="li">
+                        <a href="#" onclick="abrirSubMenu()">Categoría</a>
+                        <ul class="subMenu" id="subMenu">
+                            <li><a href="#" onclick="mostrarTodos()">Todos</a></li>
+                            <li><a href="#" onclick="mostrarFarmacia()">Farmacia</a></li>
+                            <li><a href="#" onclick="mostrarTienda()" >Tiendas</a></li>
+                            <li><a href="#" onclick="mostrarComida()">Comida</a></li>
+                            <li><a href="#" onclick="mostrarTecnologia()">Tecnología</a></li>
+                        </ul>
+                    </li>
+                    <li class="li">
+                        <a href="ruta_proceso.html">Procesos</a>
+                    </li>
+                    <li class="li">
+                        <a href="calificar.html">Calificación</a>
+                    </li>
+                </ul>
+            </nav>
+        </div>
+        <div class="center">
+            <section id="content" class="content">
+                <h2>Productos</h2>
+                <ul class="listProd">
+                    <div class="productos" id="productos">
+                    </div>
+                </ul>
+            </section>
+            <aside class="sidebar" id="sidebar">
+                <div id="nav-blog" class="navblog sidebarItem">
+                    <h3>Pedido</h3>
+                    <table>
+                        <thead>
+                            <th class="th">Producto</th>
+                            <th class="th">Precio</th>
+                        </thead>
+                        <tbody id="tbody"></tbody>
+                    </table>
+                    <a href="#" id="btn" onclick="realizarCompra()">
+                        <button class="btn btnPrincipal" >
+                            <span>Continuar</span>
+                            <span id="precio">0.00</span>
+                        </button>
+                    </a>
+                </div>
+            </aside>
+            <div class="clearFix"></div>
+        </div>
+        <footer class="footer" id="footer">
+            <div class="center">
+                <p>
+                    &copy; Copyright 2021 By Toc Toc. Todos los Derechos Reservados
+                </p>
+            </div>
+        </footer>
+        <script src="assets/js/productos.js"></script>
+    </body>
+</html>

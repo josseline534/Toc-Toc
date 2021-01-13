@@ -1,0 +1,316 @@
+:root{
+    --color-fondo:#EEECEE;
+    --color-borde:#ccc;
+    --color-menu: #444444;
+    --color-principal: #2ABBA9;
+    --color-secundario:#B8E25F;
+    -color-terciario: #FEF65D;
+    --color-oscuro: #141618;
+    --color-error: #FF3C32;
+    --color-errorSombra: #FF3C3280;
+    --color-enfasis: #FBA905;
+    --color-letra:#354D4D;
+}
+body{
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    background-color: var(--color-fondo);
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+}
+.header{
+    height: 10vh;
+    width: 100%;
+    border-bottom: var(--color-borde) solid 1px;
+    border-top: var(--color-barra) solid 5px;
+}
+
+.appLogo{
+    display: block;
+    float: left;
+    width: 25%;
+    height: 10%;
+    margin-top: -7%;
+    margin-right: 0;
+    animation: latir infinite 2s linear;
+}
+@keyframes latir {
+    0%{
+        transform: scale(1,1);
+    }
+    50%{
+        transform: scale(1.02,1.02);
+    }
+    55%{
+        transform: scale(0.95,0.95);
+    }
+    100%{
+        transform: scale(1,1);
+    }
+}
+.name{
+    width: 70%;
+    text-align: center;
+}
+.brand{
+    font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    font-size: 30px;
+    display: block;
+    margin: 0;
+}
+.contenedor{
+    background-color: var(--color-principal);
+}
+.content{
+    width: 70%;
+    float: left;
+    min-height: 30vh;
+    margin-right: 1.5rem;
+    padding-right: 1rem;
+}
+.sidebar{
+    width: 25%;
+    float: left;
+    background-color: var(--color-borde);
+    height: 20vh;
+    margin-top: 2rem;
+}
+.menu{
+    width: 100%;
+    font-size: 18px;
+}
+.menuUl{
+    display: grid;
+    grid-template-columns: 30% 30% 30% 30% 30%;
+    grid-gap: 10px;
+    width: 60%;
+    height: 15vh;
+    line-height: 100%;
+    margin: 0;
+}
+.li{
+    list-style: none;
+    text-align: center;
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.li a{
+    text-decoration: none;
+    color: var(--color-letra);
+    line-height: 88px;
+    font-weight: bold;
+}
+.li a:hover{
+    color: var(--color-borde);
+}
+.subMenu{
+    background-color: var(--color-principal);
+    color: var(--color-letra);
+    list-style: none;
+    padding: 0;
+    display: none;
+}
+.subMenu li{
+    margin-top: -25px;
+    height: 10vh;
+}
+.content h5{
+    text-transform: uppercase;
+    font-size: 17px;
+    padding-bottom: .5rem;
+    margin-bottom: .8rem;
+}
+.sidebarItem{
+    background-color: var(--color-borde);
+    padding: 1.5rem;
+}
+.sidebarItem h3{
+    border-bottom: var(--color-principal) solid 1px;
+}
+.sidebarItem a{
+    text-decoration: none;
+    color: var(--color-oscuro);
+}
+.sidebarItem a:hover{
+    text-decoration: none;
+    color: var(--color-principal);
+}
+.content p{
+    padding-bottom: 1rem;
+    line-height: 25px;
+    text-align: left;
+    border-bottom: var(--color-borde) solid 1px;
+}
+.content h2{
+    border-bottom: var(--color-borde) solid 1px;
+    padding-bottom: 1rem;
+}
+.clearFix{
+    clear: both;
+}
+.footer{
+    background-color: var(--color-oscuro);
+    width: 100%;
+    height: 10vh;
+    line-height: 65px;
+    color:var(--color-fondo);
+}
+.footer p{
+    margin-bottom: 0;
+}
+.btn{
+    background-color: var(--color-menu);
+    color: var(--color-letra);
+    padding: 1rem;
+    font-weight: bold;
+    text-transform: uppercase;
+    font-size: .8rem;
+    text-decoration: none;
+    max-width: 60%;
+    border: none;
+    cursor: pointer;
+}
+.midForm{
+    width: 50%;
+    margin: 0 auto;
+}
+.midForm label{
+    text-align: left;
+    display: block;
+    float: left;
+    margin-bottom: .5rem;
+    margin-top: .8rem;
+    font-size: 1rem;
+}
+input[type="text"], select[name="Fpago"]{
+    width: 100%;
+    height: 30px;
+    border: var(--color-menu) solid 1px;
+    padding: .3rem;
+    margin-bottom: .2rem;
+    transition: 300ms all;
+}
+.radioButton{
+    margin-top: 1rem;
+    float: left;
+    margin-bottom: .8rem;
+}
+input[type="text"]:focus{
+    box-shadow: 0 0 8px var(--color-menu) inset;
+}
+.btnPrincipal{
+    margin-top: 1rem;
+    background-color: var(--color-principal);
+    transition: 300ms all;
+}
+.btnPrincipal:hover{
+    background-color: var(--color-menu);
+    color: var(--color-borde);
+}
+.formGroup p{
+    display: none;
+    font-size: 0.8rem;
+    margin: 0.5rem;
+    padding-bottom: 0;
+    color: var(--color-error);
+    border: none;
+}
+.error{
+    box-shadow: 2px 2px var(--color-errorSombra),-2px -2px var(--color-errorSombra);
+}
+
+.boxProducto{
+    list-style: none;
+    text-align: right;
+    width: 25%;
+    height: 100%;
+    border: var(--color-borde) solid 1px;
+    border-radius: 5px;
+    padding: .8rem;
+    display: inline-block;
+    margin-left: .8rem;
+    margin-bottom: .8rem;
+}
+.imgProd{
+    width: 90%;
+    height: 100px;
+    margin-right: .5rem;
+}
+.boxProducto .btn{
+    padding: .5rem;
+}
+.boxProducto h5{
+    padding-bottom: .5rem;
+    margin-bottom: 0;
+    margin-top: .5rem;
+}
+.boxProducto p{
+    padding-bottom: .5rem;
+    padding-top: .5rem;
+    text-align: right;
+    margin-top: 0;
+}
+.boxProducto p::before{
+    content: "$";
+}
+#precio::before{
+    content: "$";
+}
+table{
+    margin-top: 1rem;
+    border: var(--color-menu) solid 1px;
+}
+.th{
+    width: 30%;
+}
+.btn a:hover{
+    color: var(--color-fondo);
+}
+.formCalificacion {
+    width: 90%;
+    height: 38.5vh;
+    margin: 0 auto;
+    padding: .8rem;
+    border: 1px solid #d9d9d9;
+}
+.formCalificacion span{
+    padding: 1rem;
+}
+.formCalificacion p,
+.formCalificacion input[type="submit"] {
+    text-align: center;
+    font-size: 1rem;
+}
+
+
+.formCalificacion input[type="radio"] {
+    display: none;
+}
+
+.formCalificacion label {
+    color: var(--color-borde);
+    font-size: 1.5rem;
+}
+
+.formCalificacion .clasificacion {
+    direction: rtl;
+    unicode-bidi: bidi-override;
+    padding: 0;
+}
+
+.formCalificacion label:hover,
+.formCalificacion label:hover~label {
+    color: var(--color-enfasis);
+}
+
+.formCalificacion input[type="radio"]:checked~label {
+    color: var(--color-enfasis);
+}
+.btn a{
+    color: var(--color-letra);
+    text-decoration: none;
+}
+.content ol{
+    line-height: 35px;
+    text-align: left;
+}
